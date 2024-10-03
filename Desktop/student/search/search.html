@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #searchInput {
+            margin-bottom: 12px;
+            padding: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Searchable Table Example</h2>
+<input type="text" id="searchInput" placeholder="Search for names..">
+
+<table id="dataTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>28</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>34</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Michael Johnson</td>
+            <td>45</td>
+            <td>Chicago</td>
+        </tr>
+        <tr>
+            <td>Emily Davis</td>
+            <td>22</td>
+            <td>Miami</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Get the search input
+    const searchInput = document.getElementById('searchInput');
+    const table = document.getElementById('dataTable');
+    const rows = table.getElementsByTagName('tr');
+
+    // Add event listener for input
+    searchInput.addEventListener('keyup', function() {
+        const filter = searchInput.value.toLowerCase();
+        
+        // Loop through all table rows (except the header)
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            // Check each cell in the row
+            for (let j = 0; j < cells.length; j++) {
+                const cell = cells[j];
+                if (cell.textContent.toLowerCase().indexOf(filter) > -1) {
+                    found = true;
+                    break;
+                }
+            }
+
+            // Show or hide the row based on the search
+            rows[i].style.display = found ? '' : 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
