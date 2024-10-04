@@ -11,8 +11,6 @@
     <style>
         #result {
             margin-top: 20px;
-            border: 1px solid #ccc;
-            /* padding: 10px; */
         }
         table,thead tr th {
             border: 1px solid black;
@@ -35,26 +33,17 @@
             <div class="col-12 main">
                 <h5 class="text-center">Student Bio Data</h5>
                 <form id="data-form" class="forms">
+                    <!-- Form Fields -->
                     <label for="name">Student Name:</label>
                     <input type="text" id="name" placeholder="Enter your name.." required pattern="[A-Za-z]+" title="Only letters are allowed (no spaces or numbers).">
-                    <span class="error" id="nameerror"></span>
-                    
                     <label for="serial">Student S/N:</label>
                     <input type="number" id="serial" placeholder="Enter your serial number" required>
-                    <span class="error" id="serialerror"></span>
-                    
                     <label for="mobile">Mobile:</label>
                     <input type="number" id="mobile" placeholder="Enter your mobile number.." required>
-                    <span class="error" id="mobileerror"></span>
-                    
                     <label for="address">Address:</label>
                     <textarea id="address" placeholder="Enter your address" required></textarea>
-                    <span class="error" id="addresserror"></span>
-                    
                     <label for="date">Date of Birth:</label>
                     <input type="date" id="date" class="form-group" required>
-                    <span class="error" id="dateerror"></span>
-                    
                     <label for="department">Department:</label>
                     <select id="department" class="form-control" required>
                         <option value="">Select department</option>
@@ -66,46 +55,53 @@
                         <option value="Artificial">Artificial</option>
                         <option value="Agriculture">Agriculture</option>
                     </select>
-                    <span class="error" id="departmenterror"></span>
-                    
                     <label for="email">Email ID:</label>
                     <input type="email" id="email" placeholder="Enter your email ID.." required>
-                    <span class="error" id="mailerror"></span>
-                    
                     <label for="father">Father's Name:</label>
                     <input type="text" id="father" placeholder="Enter your father's name.." required pattern="[A-Za-z]+" title="Only letters are allowed (no spaces or numbers).">
-                    <span class="error" id="fathererror"></span>
-                    
                     <label for="mother">Mother's Name:</label>
                     <input type="text" id="mother" placeholder="Enter your mother's name.." required pattern="[A-Za-z]+" title="Only letters are allowed (no spaces or numbers).">
-                    <span class="error" id="mothererror"></span>
-                    
                     <button type="submit">Submit</button>
                 </form>
+                
                 <div id="result">
-                    <h3>Submitted Data:</h3>
-                    <table>
+                    <table id="dataTable">
                         <thead>
                             <tr>
-                                <th class="sortable" id="name-header">Name <i class="fas fa-sort"></i></th>
-                                <th class="sorts" id="serial-header">S/N <i class="fas fa-sort"></i></th>
-                                <th>Mobile</th>
-                                <th>Address</th>
-                                <th>Date of Birth</th>
-                                <th>Department</th>
-                                <th>Email</th>
-                                <th>Father's Name</th>
-                                <th>Mother's Name</th>
+                                <th onclick="sortTable(0)">Name <input type="text" placeholder="Search by name" class="search-input"></th>
+                                <th onclick="sortTable(1)">S/N <input type="text" placeholder="Search by S/N" class="search-input"></th>
+                                <th onclick="sortTable(2)">Mobile <input type="text" placeholder="Search by mobile" class="search-input"></th>
+                                <th onclick="sortTable(3)">Address <input type="text" placeholder="Search by address" class="search-input"></th>
+                                <th onclick="sortTable(4)">Date of Birth <input type="date" placeholder="Search by date" class="search-input"></th>
+                                <th>
+                                    Department 
+                                    <select id="departmentSearch" class="search-input" onchange="filterTable()">
+                                        <option value="">All Departments</option>
+                                        <option value="Electrical & Electronics">Electrical & Electronics</option>
+                                        <option value="Electrical & Communication">Electrical & Communication</option>
+                                        <option value="Computers">Computers</option>
+                                        <option value="Civil">Civil</option>
+                                        <option value="Mechanical">Mechanical</option>
+                                        <option value="Artificial">Artificial</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                    </select>
+                                </th>
+                                <th onclick="sortTable(6)">Email <input type="text" placeholder="Search by email" class="search-input"></th>
+                                <th onclick="sortTable(7)">Father's Name <input type="text" placeholder="Search by father" class="search-input"></th>
+                                <th onclick="sortTable(8)">Mother's Name <input type="text" placeholder="Search by mother" class="search-input"></th>
                             </tr>
                         </thead>
                         <tbody id="student-body">
-                           
+                            <!-- Dynamic student rows will be inserted here -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+
+
     <script src="../js/student.js"></script>
 </body>
 </html>

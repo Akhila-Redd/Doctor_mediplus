@@ -1,17 +1,15 @@
-let students = [];
-let isAscendingName = true; 
-let isAscendingSerial = true; 
+let students = JSON.parse(localStorage.getItem('students')) || [];
+
 function fetchStudents() {
-    fetch('../json/server.json')
+    fetch('../json/server.json') // Adjust the path to your JSON file
         .then(response => response.json())
         .then(data => {
-            students = data;
-            const localStudents = JSON.parse(localStorage.getItem('students')) || [];
-            students = [...students, ...localStudents]; 
-            displayStudents(); 
+            students = [...data, ...students]; // Merge JSON data with localStorage data
+            displayStudents(); // Display all students
         })
         .catch(error => console.error('Error fetching the JSON file:', error));
 }
+
 function displayStudents() {
     const studentBody = document.getElementById("student-body");
     studentBody.innerHTML = students.map(student => `
@@ -28,21 +26,9 @@ function displayStudents() {
         </tr>
     `).join('');
 }
-function sortStudentsByName() {
-    students.sort((a, b) => isAscendingName ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name));
-    isAscendingName = !isAscendingName; 
-    displayStudents(); 
-}
-function sortStudentsBySerial() {
-    students.sort((a, b) => isAscendingSerial ? a.serial - b.serial : b.serial - a.serial);
-    isAscendingSerial = !isAscendingSerial; 
-    displayStudents(); 
-}
-document.getElementById("name-header").addEventListener("click", sortStudentsByName);
-document.getElementById("serial-header").addEventListener("click", sortStudentsBySerial);
-fetchStudents();
+
 document.getElementById("data-form").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     const name = document.getElementById("name").value;
     const serial = document.getElementById("serial").value;
     const mobile = document.getElementById("mobile").value;
@@ -52,6 +38,7 @@ document.getElementById("data-form").addEventListener("submit", function (event)
     const email = document.getElementById("email").value;
     const father = document.getElementById("father").value;
     const mother = document.getElementById("mother").value;
+
     const student = {
         name,
         serial: parseInt(serial, 10),
@@ -63,8 +50,65 @@ document.getElementById("data-form").addEventListener("submit", function (event)
         father,
         mother
     };
+
     students.push(student);
     localStorage.setItem('students', JSON.stringify(students));
     document.getElementById("data-form").reset();
     displayStudents();
 });
+
+// Fetch students from JSON file when the page loads
+fetchStudents();
+
+// Add event listener for individual column search inputs
+const searchInputs = document.querySelectorAll('.search-input');
+searchInputs.forEach((input, index) => {
+    input.addEventListener('keyup', function() {
+        filterTable();
+    });
+});
+
+// Add event listener for department dropdown
+const departmentDropdown = document.getElementById('departmentSearch');
+
+function filterTable() {
+    const filters = Array.from(searchInputs).map(input => input.value.toLowerCase());
+    const departmentFilter = departmentDropdown.value;
+
+    const rows = document.querySelectorAll('#student-body tr');
+
+    rows.forEach(row => {
+        const cells = row.getElementsByTagName('td');
+        const matches = filters.every((filter, index) => {
+            if (index === 5) { // Department column
+                return departmentFilter ? cells[index].textContent === departmentFilter : true;
+            }
+            return cells[index].textContent.toLowerCase().includes(filter);
+        });
+        row.style.display = matches ? '' : 'none';
+    });
+}
+
+// Sorting function
+function sortTable(columnIndex) {
+    const rows = Array.from(document.querySelectorAll('#student-body tr'));
+    const isAscending = rows[0].cells[columnIndex].getAttribute('data-order') === 'asc';
+
+    rows.sort((rowA, rowB) => {
+        const cellA = rowA.cells[columnIndex].textContent.trim();
+        const cellB = rowB.cells[columnIndex].textContent.trim();
+
+        if (!isNaN(cellA) && !isNaN(cellB)) {
+            return isAscending ? cellA - cellB : cellB - cellA; // For numeric columns
+        } else {
+            return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA); // For string columns
+        }
+    });
+
+    rows.forEach(row => {
+        document.getElementById('student-body').appendChild(row);
+    });
+
+    // Toggle the sort order for next click
+    rows[0].cells[columnIndex].setAttribute('data-order', isAscending ? 'desc' : 'asc');
+}
