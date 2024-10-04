@@ -1,0 +1,22 @@
+.forms{
+    display:flex;
+    flex-direction: column;
+    width:50%;
+    margin:auto;
+}
+input{
+    height:45px;
+    margin-bottom: 15px;
+}
+select{
+    height:45px;
+    margin-bottom: 15px;
+}
+button{
+    height:45px;
+    margin-top: 5px;
+}
+.sear-in{
+    width:125px;
+    border-radius: 10px;
+}
