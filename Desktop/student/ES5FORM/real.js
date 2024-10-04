@@ -1,9 +1,7 @@
 var students = JSON.parse(localStorage.getItem('students')) || [];
-
-// Fetch students from JSON file
 function fetchStudents() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "./real.json", true); // Adjust the path to your JSON file
+    xhr.open("GET", "./real.json", true); 
 
     xhr.onload = function() {
         if (xhr.status === 200) {
@@ -23,11 +21,9 @@ function fetchStudents() {
 
     xhr.send();
 }
-
-// Display students in the table
 function displayStudents() {
     var studentBody = document.getElementById("student-body");
-    studentBody.innerHTML = ""; // Clear previous entries
+    studentBody.innerHTML = ""; 
     for (var i = 0; i < students.length; i++) {
         var student = students[i];
         studentBody.innerHTML += "<tr>" +
@@ -43,8 +39,6 @@ function displayStudents() {
             "</tr>";
     }
 }
-
-// Handle form submission
 document.getElementById("data-form").addEventListener("submit", function(event) {
     event.preventDefault();
     var name = document.getElementById("name").value;
@@ -74,8 +68,6 @@ document.getElementById("data-form").addEventListener("submit", function(event) 
     document.getElementById("data-form").reset();
     displayStudents();
 });
-
-// Search functionality for each column
 function searchColumn(columnIndex) {
     var input = document.querySelectorAll('th input')[columnIndex];
     var filter = input.value.toLowerCase();
@@ -92,19 +84,13 @@ function searchColumn(columnIndex) {
         rows[i].style.display = match ? '' : 'none';
     }
 }
-
-// Sorting function
 function sortTable(columnIndex) {
     var studentBody = document.getElementById('student-body');
     var rows = studentBody.getElementsByTagName('tr');
     var rowsArray = [];
-
-    // Collect rows into an array
     for (var i = 0; i < rows.length; i++) {
         rowsArray.push(rows[i]);
     }
-
-    // Determine if sorting in ascending order
     var isAscending = true;
     if (rowsArray.length > 1) {
         var firstValue = rowsArray[1].cells[columnIndex].textContent.trim();
@@ -113,8 +99,6 @@ function sortTable(columnIndex) {
                       (firstValue < secondValue) : 
                       (parseInt(firstValue, 10) < parseInt(secondValue, 10));
     }
-
-    // Simple bubble sort
     for (var i = 0; i < rowsArray.length - 1; i++) {
         for (var j = 0; j < rowsArray.length - i - 1; j++) {
             var cellA = rowsArray[j].cells[columnIndex].textContent.trim();
@@ -125,32 +109,27 @@ function sortTable(columnIndex) {
                 (isNaN(cellA) || isNaN(cellB) ? (cellA < cellB) : (parseInt(cellA, 10) < parseInt(cellB, 10)));
             
             if (swapCondition) {
-                // Swap the rows
                 var temp = rowsArray[j];
                 rowsArray[j] = rowsArray[j + 1];
                 rowsArray[j + 1] = temp;
             }
         }
     }
-
-    // Clear the table and re-add sorted rows
     studentBody.innerHTML = '';
     for (var i = 0; i < rowsArray.length; i++) {
         studentBody.appendChild(rowsArray[i]);
     }
 }
- // Search functionality for Department dropdown
  function searchByDepartment() {
     var departmentDropdown = document.getElementById('departmentSearch');
     var selectedDepartment = departmentDropdown.value;
     var rows = document.querySelectorAll('#student-body tr');
 
     for (var i = 0; i < rows.length; i++) {
-        var departmentCell = rows[i].getElementsByTagName('td')[5]; // Assuming department is the 6th column
+        var departmentCell = rows[i].getElementsByTagName('td')[5];
         rows[i].style.display = selectedDepartment ? departmentCell.textContent === selectedDepartment ? '' : 'none' : '';
     }
 }
-        // Search functionality for overall search
         function searchOverall() {
             var input = document.getElementById('overallSearch');
             var filter = input.value.toLowerCase();
@@ -159,19 +138,13 @@ function sortTable(columnIndex) {
             for (var i = 0; i < rows.length; i++) {
                 var cells = rows[i].getElementsByTagName('td');
                 var match = false;
-
-                // Check each cell in the row
                 for (var j = 0; j < cells.length; j++) {
                     if (cells[j].textContent.toLowerCase().includes(filter)) {
-                        match = true; // At least one cell matches
+                        match = true;
                         break;
                     }
                 }
-
-                // Show or hide the row based on the match
                 rows[i].style.display = match ? '' : 'none';
             }
         }
-
-// Fetch students from JSON file when the page loads
 fetchStudents();
