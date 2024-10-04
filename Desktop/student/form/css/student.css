@@ -21,6 +21,6 @@ input[type=phone-number],textarea,input[type=date],select{
     width:100%;
     background-color: antiquewhite;
 }
-.texts{
+.search-input{
     width:130px;
 }

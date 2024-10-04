@@ -59,6 +59,20 @@ document.getElementById("data-form").addEventListener("submit", function (event)
 
 // Fetch students from JSON file when the page loads
 fetchStudents();
+ // Fetch students from JSON file when the page loads
+ fetchStudents();
+
+ // Overall search function
+ function overallSearch() {
+     const searchValue = document.getElementById('overallSearch').value.toLowerCase();
+     const rows = document.querySelectorAll('#student-body tr');
+
+     rows.forEach(row => {
+         const cells = row.getElementsByTagName('td');
+         const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(searchValue));
+         row.style.display = match ? '' : 'none';
+     });
+ }
 
 // Add event listener for individual column search inputs
 const searchInputs = document.querySelectorAll('.search-input');
