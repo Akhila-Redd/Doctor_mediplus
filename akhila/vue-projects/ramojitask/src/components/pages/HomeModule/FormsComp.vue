@@ -55,10 +55,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
 }
-/* 
-.content {
-  flex-grow: 1;
-} */
 
 .print {
   display: flex;

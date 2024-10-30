@@ -1,0 +1,306 @@
+{
+  "students": [
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "mobile": "123-456-7890",
+      "father": "Robert Doe",
+      "mother": "Mary Doe",
+      "id": "2092"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "securePass456",
+      "mobile": "234-567-8901",
+      "father": "Michael Smith",
+      "mother": "Linda Smith",
+      "id": "ca1e"
+    },
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "mobile": "123-456-7890",
+      "father": "Robert Doe",
+      "mother": "Mary Doe",
+      "id": "43a1"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "securePass456",
+      "mobile": "234-567-8901",
+      "father": "Michael Smith",
+      "mother": "Linda Smith",
+      "id": "9572"
+    },
+    {
+      "firstname": "Emily",
+      "lastname": "Johnson",
+      "email": "emily.johnson@example.com",
+      "password": "emily789",
+      "mobile": "345-678-9012",
+      "father": "David Johnson",
+      "mother": "Sarah Johnson",
+      "id": "95bc"
+    },
+    {
+      "firstname": "Michael",
+      "lastname": "Brown",
+      "email": "michael.brown@example.com",
+      "password": "michael321",
+      "mobile": "456-789-0123",
+      "father": "James Brown",
+      "mother": "Karen Brown",
+      "id": "5cae"
+    },
+    {
+      "firstname": "Sarah",
+      "lastname": "Davis",
+      "email": "sarah.davis@example.com",
+      "password": "sarah@123",
+      "mobile": "567-890-1234",
+      "father": "Robert Davis",
+      "mother": "Emily Davis",
+      "id": "0e7d"
+    },
+    {
+      "firstname": "Chris",
+      "lastname": "Martinez",
+      "email": "chris.martinez@example.com",
+      "password": "chris2023",
+      "mobile": "678-901-2345",
+      "father": "Antonio Martinez",
+      "mother": "Maria Martinez",
+      "id": "c704"
+    },
+    {
+      "firstname": "Anna",
+      "lastname": "Garcia",
+      "email": "anna.garcia@example.com",
+      "password": "anna!456",
+      "mobile": "789-012-3456",
+      "father": "Jose Garcia",
+      "mother": "Carmen Garcia",
+      "id": "1853"
+    },
+    {
+      "firstname": "David",
+      "lastname": "Miller",
+      "email": "david.miller@example.com",
+      "password": "david789",
+      "mobile": "890-123-4567",
+      "father": "William Miller",
+      "mother": "Patricia Miller",
+      "id": "d470"
+    },
+    {
+      "firstname": "Laura",
+      "lastname": "Wilson",
+      "email": "laura.wilson@example.com",
+      "password": "laura2022",
+      "mobile": "901-234-5678",
+      "father": "Richard Wilson",
+      "mother": "Barbara Wilson",
+      "id": "e500"
+    },
+    {
+      "firstname": "James",
+      "lastname": "Anderson",
+      "email": "james.anderson@example.com",
+      "password": "james!321",
+      "mobile": "012-345-6789",
+      "father": "Charles Anderson",
+      "mother": "Susan Anderson",
+      "id": "5eb5"
+    },
+    {
+      "firstname": "Olivia",
+      "lastname": "Thomas",
+      "email": "olivia.thomas@example.com",
+      "password": "olivia789",
+      "mobile": "123-456-7891",
+      "father": "Matthew Thomas",
+      "mother": "Jessica Thomas",
+      "id": "8da2"
+    },
+    {
+      "firstname": "Daniel",
+      "lastname": "Taylor",
+      "email": "daniel.taylor@example.com",
+      "password": "daniel@123",
+      "mobile": "234-567-8902",
+      "father": "Paul Taylor",
+      "mother": "Nancy Taylor",
+      "id": "99b5"
+    },
+    {
+      "firstname": "Sophia",
+      "lastname": "Moore",
+      "email": "sophia.moore@example.com",
+      "password": "sophia456",
+      "mobile": "345-678-9013",
+      "father": "Gary Moore",
+      "mother": "Angela Moore",
+      "id": "0a44"
+    },
+    {
+      "firstname": "Matthew",
+      "lastname": "Jackson",
+      "email": "matthew.jackson@example.com",
+      "password": "matthew!2023",
+      "mobile": "456-789-0124",
+      "father": "Ronald Jackson",
+      "mother": "Deborah Jackson",
+      "id": "c9d6"
+    },
+    {
+      "firstname": "Mia",
+      "lastname": "White",
+      "email": "mia.white@example.com",
+      "password": "mia!789",
+      "mobile": "567-890-1235",
+      "father": "Steven White",
+      "mother": "Laura White",
+      "id": "04f1"
+    },
+    {
+      "firstname": "Ethan",
+      "lastname": "Harris",
+      "email": "ethan.harris@example.com",
+      "password": "ethan123",
+      "mobile": "678-901-2346",
+      "father": "Brian Harris",
+      "mother": "Rachel Harris",
+      "id": "328b"
+    },
+    {
+      "firstname": "Isabella",
+      "lastname": "Clark",
+      "email": "isabella.clark@example.com",
+      "password": "isabella456",
+      "mobile": "789-012-3457",
+      "father": "Kevin Clark",
+      "mother": "Angela Clark",
+      "id": "11bf"
+    },
+    {
+      "firstname": "Alexander",
+      "lastname": "Lewis",
+      "email": "alexander.lewis@example.com",
+      "password": "alexander@2023",
+      "mobile": "890-123-4568",
+      "father": "Thomas Lewis",
+      "mother": "Linda Lewis",
+      "id": "2f0d"
+    },
+    {
+      "firstname": "Liam",
+      "lastname": "Hall",
+      "email": "liam.hall@example.com",
+      "password": "liam@789",
+      "mobile": "123-456-7892",
+      "father": "Nathan Hall",
+      "mother": "Samantha Hall",
+      "id": "f493"
+    },
+    {
+      "id": "4e62",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "qwqweqw",
+      "mobile": "21337632525",
+      "father": "satya",
+      "mother": "lucky",
+      "firstname ": "akhilareddy",
+      "lastname  ": "polu",
+      "email ": "poluakhila14@gmail.com"
+    },
+    {
+      "id": "a62e",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "qwerty",
+      "mobile": "21337632525",
+      "father": "satya",
+      "mother": "lucky",
+      "firstname ": "akhilareddy",
+      "lastname  ": "polu",
+      "email ": "poluakhila14@gmail.com"
+    },
+    {
+      "id": "d479",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "qwerty",
+      "mobile": "21337632525",
+      "father": "satya",
+      "mother": "polu.lucky",
+      "firstname ": "akhilareddy",
+      "lastname  ": "polu",
+      "email ": "upendrareddyopt@gmail.com"
+    },
+    {
+      "id": "48fe",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "akhila",
+      "mobile": "9858542315423",
+      "father": "subbareddy",
+      "mother": "polu.lucky",
+      "firstname ": "akhilareddy",
+      "lastname  ": "polu",
+      "email ": "hai@gmail.com"
+    },
+    {
+      "id": "3f8a",
+      "firstname": "akhilareddy",
+      "lastname": "polu",
+      "email": "poluakhila14@gmail.com",
+      "password": "awqwqw",
+      "mobile": "21337632525",
+      "father": "satya",
+      "mother": "lucky"
+    },
+    {
+      "id": "9041",
+      "firstname": "asha",
+      "lastname": "abhi",
+      "email": "qwerty@gmail.com",
+      "password": "qwerty",
+      "mobile": "23343434",
+      "father": "satya",
+      "mother": "lucky"
+    },
+    {
+      "id": "070f",
+      "firstname": "akhila",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "father": "",
+      "mother": ""
+    },
+    {
+      "id": "2274",
+      "firstname": "akhilareddy",
+      "lastname": "polu",
+      "email": "msvmanojkumarreddy@gmail.com",
+      "password": "sdds",
+      "mobile": "343434",
+      "father": "satya",
+      "mother": "pokjm bnred"
+    }
+  ]
+}

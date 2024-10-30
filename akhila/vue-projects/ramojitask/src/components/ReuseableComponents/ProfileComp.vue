@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <div class="border borders border-dark border-2">
-            <img :src="image" alt="akhila">
+            <img :src="image" alt="">
         </div>
         <div class="profile-name">
             <p class="text-danger m-0">{{ profile }}</p>
