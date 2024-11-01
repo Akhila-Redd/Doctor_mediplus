@@ -1,9 +1,4 @@
-
-
 <template>
-    <div class="container">
-        <HeaderComp />
-    </div>
     <div class="container">
         <TabsComponent @tab-selected="selectTab" />
     </div>
@@ -87,12 +82,12 @@
             </div>
         </div>
     </div>
-    <div class="btn bg-danger mt-4 text-white">view all <i class="ri-arrow-right-line ms-1"></i></div>
+    <div class="btn  mt-4 text-white" style="background-color: red;">view all <i class="ri-arrow-right-line ms-1"></i></div>
 </template>
 
 <script>
-import HeaderComp from "@/components/HeaderComp.vue";
-import CardsComponent from "@/components/ReuseableComponents/CardsComponent.vue";
+// import HeaderComp from "@/components/HeaderComp.vue";
+import CardsComponent from "@/components/ReuseableComponents/CardsComponent.vue";   
 import ProfileComp from "@/components/ReuseableComponents/ProfileComp.vue";
 import TabsComponent from "@/components/ReuseableComponents/TabsComponent.vue";
 
@@ -130,7 +125,7 @@ export default {
     components: {
         ProfileComp,
         CardsComponent,
-        HeaderComp,
+        // HeaderComp,
         TabsComponent
     },
 };
