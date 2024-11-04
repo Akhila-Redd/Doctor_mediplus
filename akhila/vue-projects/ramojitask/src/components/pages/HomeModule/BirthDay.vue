@@ -5,7 +5,7 @@
             Birthday
             <span><img src="@/assets/birth.png" alt=""></span>
         </h4>
-        <div class="top-border d-flex justify-content-between mb-3 mt-2">
+        <div class="top-border  mb-3 mt-2">
             <div class="d-flex ">
                 <div class="me-2 mt-2">
                     <img src="@/assets/person.svg" alt=""
@@ -77,10 +77,8 @@ li{
     /* Add space between image and text */
 }
 .main{
-    width: 454px;
+    width: 310px;
 height: 428px;
 border-radius: 4px 0px 0px 0px;
-
-
 }
 </style>

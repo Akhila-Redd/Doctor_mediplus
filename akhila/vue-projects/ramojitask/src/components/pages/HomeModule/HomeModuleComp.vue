@@ -74,19 +74,18 @@
                     <div class="profile-img me-2 p-0 position-relative z-3">
                         <ProfileComp :image="profile.image" :profile="profile.name" :profilename="profile.position" />
                     </div>
-                    <div class="flex-grow-1" style=" position: relative; left: -100px; ">
+                    <div class="flex-grow-1" style=" position: relative; left: -100px; top: -7px; ">
                         <CardsComponent footer="viewTeam" class="teams text-white border-0" 
-                            style="width: 100%; height: fit-content;" />
+                            style="width: 100%;  height: fit-content;" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="btn  mt-4 text-white" style="background-color: red;">view all <i class="ri-arrow-right-line ms-1"></i></div>
+    <div class="btn mt-5 text-white" style="background-color: red;">view all <i class="ri-arrow-right-line ms-1"></i></div>
 </template>
 
 <script>
-// import HeaderComp from "@/components/HeaderComp.vue";
 import CardsComponent from "@/components/ReuseableComponents/CardsComponent.vue";   
 import ProfileComp from "@/components/ReuseableComponents/ProfileComp.vue";
 import TabsComponent from "@/components/ReuseableComponents/TabsComponent.vue";
@@ -116,7 +115,7 @@ export default {
                     position: 'Hotel Manger',
                 },
             ],
-            image:'@/assets/image'
+            image:'@/assets/image',
         }
     },
     methods:{
@@ -125,7 +124,6 @@ export default {
     components: {
         ProfileComp,
         CardsComponent,
-        // HeaderComp,
         TabsComponent
     },
 };
@@ -145,21 +143,20 @@ export default {
     opacity: 0px;
 
 }
-
 .teams {
     background-color: red !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white
+    color: white;
+    font-size: 18px;
+     font-weight: 600;
 }
-
 .manager {
     display: flex !important;
     text-align: center !important;
     justify-content: center !important;
     background-color: white !important;
 }
-
 </style>
 <!-- home module -->

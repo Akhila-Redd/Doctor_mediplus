@@ -1,6 +1,6 @@
   <template>
     <div :style="{ backgroundColor: bgColor }" class="card cards m-4 p-3" style="height:193px;">
-      <h5 class="card-title titles  p-2 text-start">
+      <h5 class="card-title titles  p-2 text-start" style="font-size: 20px;font-weight: 700;">
         {{ titleName }}
       </h5>
       <div v-show="img"
