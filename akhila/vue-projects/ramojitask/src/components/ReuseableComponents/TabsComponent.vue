@@ -235,14 +235,6 @@ export default {
   font-weight: 500;
   color: white;
 }
-
-/* .main{
-  height: 428px;
-  width:310px;
-}
-.top-border{
-  display: flex;
-} */
 .nav-items {
   margin: 0 10px;
 }

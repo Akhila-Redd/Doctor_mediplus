@@ -1,21 +1,16 @@
 <template>
-    <button @click="sendData">Send Data to Parent</button>
+    <button @click="notiyParent">Click Me</button>
 </template>
   
 <script>
   export default {
-    emits: {
-      dataSent: (payload) => {
-        // Validate that the payload is a string
-        return typeof payload === 'string';
-      }
-    },
+    // emits: ['childClicked'], // Declaring the event
     methods: {
-      sendData() {
-        const data = 'Hello, Parent!';
-        this.$emit('dataSent', data); // Emit the event with the data
-      }
-    }
-  }
+      notiyParent() {
+        this.$emit('childClicked', 'Hello from Child!'); // Emitting the event
+        this.$emit('childClickeds', 'Hello from Childd!'); // Emitting the event
+      },
+    },
+  };
 </script>
   

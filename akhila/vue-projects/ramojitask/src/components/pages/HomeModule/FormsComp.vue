@@ -84,7 +84,7 @@ export default {
 
 .nav-tabs .nav-link.active {
   background-color: green;
-  color: white; 
+  color: white !important; 
   border: 1px solid green; 
 }
 </style>

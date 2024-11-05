@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <HomeModuleComp />
   <div class="container-fluid footers mt-4">
     <FooterComp />
@@ -23,9 +23,9 @@ export default {
   background: #FFC9C6;
 
 }
-</style>
+</style> -->
 
-<!-- <template>
+<template>
 <ParentComp />
 </template>
 <script>
@@ -35,4 +35,4 @@ export default {
   components: {
     ParentComp
   }
-}</script> -->
+}</script>
