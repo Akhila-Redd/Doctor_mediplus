@@ -2,7 +2,7 @@
     <div class="container">
         <HeaderComp :image="currentHeaderImage"/>
     </div>
-    <div class="container d-flex ms-0 gap-4 mt-4">
+    <div class="container d-flex ms-0 gap-3 mt-4">
         <div v-for="item in items" :key="item.name">
             <Examplelink :path="item.path" :name="item.name"/>
         </div> 

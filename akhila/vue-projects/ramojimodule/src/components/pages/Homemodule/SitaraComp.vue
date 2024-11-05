@@ -54,6 +54,7 @@
   import SopsComp from "../StaticComponents/SopsComp.vue";
   import FormsComp from "../StaticComponents/FormsComp.vue";
   import BirthDay from "../StaticComponents/BirthDay.vue";
+
   
   export default {
     components: {

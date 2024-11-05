@@ -1,6 +1,6 @@
 <template>
   <router-link :to="path">
-    <p class="btn border border-1 p-2" :class="{'active-link': isActive}">
+    <p class="btn border border-1 p-2" :class="{'active-link': isActive}" style="font-size:16px; font-weight: 700; color:#616161 ;">
       <img src="@/assets/hotel.png" alt="" />
       {{ name }}
     </p>
@@ -16,7 +16,8 @@ export default {
   computed: {
     isActive() {
       return this.$route.path === this.path;
-    }
+    },
+    
   }
 };
 </script>
@@ -24,10 +25,16 @@ export default {
 <style scoped>
 .active-link {
   background-color:red;
-  color: white;
+  color: white !important;
 }
 .btn {
   transition: background-color 0.3s ease;
+}
+.btn:hover{
+  background-color: antiquewhite;
+  color: rgb(1, 131, 245) !important;
+  font-size: 12px !important;
+  font-family:'Times New Roman', Times, serif;
 }
 </style>
 
