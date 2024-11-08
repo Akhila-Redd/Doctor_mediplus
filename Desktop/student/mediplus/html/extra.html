@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            z-index: 1;
+            margin-top: 5px; /* Space between button and dropdown */
+            width: 100%;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block; /* Show on hover */
+        }
+
+        .dropdown-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f0f0f0; /* Highlight on hover */
+        }
+        .body{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="body">
+
+<div class="dropdown">
+    <button class="dropdown-button">Select an option</button>
+    <div class="dropdown-menu">
+        <div class="dropdown-item">Option 1</div>
+        <div class="dropdown-item">Option 2</div>
+        <div class="dropdown-item">Option 3</div>
+    </div>
+    <button class="dropdown-button">Select an option</button>
+    <div class="dropdown-menu">
+        <div class="dropdown-item">Option 1asa</div>
+        <div class="dropdown-item">Option 2</div>
+        <div class="dropdown-item">Option 3</div>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropdown-button">Select an option</button>
+    <div class="dropdown-menu">
+        <div class="dropdown-item">Option 1</div>
+        <div class="dropdown-item">Option 2</div>
+        <div class="dropdown-item">Option 3</div>
+    </div>
+    <button class="dropdown-button">Select an option</button>
+    <div class="dropdown-menu">
+        <div class="dropdown-item">Option 1asa</div>
+        <div class="dropdown-item">Option 2</div>
+        <div class="dropdown-item">Option 3</div>
+    </div>
+</div>
+
+</body>
+</html>
